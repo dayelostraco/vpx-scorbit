@@ -6,7 +6,7 @@ Players do not install Python, this skill, or a native SDK for the default route
 ## Clean setup
 
 Use Git, Windows with Python 3.12, and the Windows `cscript` VBScript host. Obtain
-a source checkout (fork/clone the repository once published, or unpack the
+a source checkout (fork/clone the public repository, or unpack the
 review source archive), open PowerShell there, and confirm the root contains
 `pyproject.toml` and `README.md`. All commands below run from that root. Linux-only
 test runs skip the native tests and cannot qualify the runtime. No VPX install,
@@ -108,8 +108,9 @@ isolated pilot, retain its manifest/module hashes, then run capture and gameplay
 validation. Never overwrite the author's table or live INIs while developing.
 
 The Windows CI workflow mirrors local checks and fails if cscript is missing.
-Hosted execution remains unverified until the repository is published and its
-first run completes. Scanners need internet access for rules/advisory databases.
+The [initial hosted run](https://github.com/dayelostraco/vpx-scorbit/actions/runs/40205322892)
+passed on Windows. Check the repository Actions tab for the current commit's
+result. Scanners need internet access for rules/advisory databases.
 
 ## Review and comments
 

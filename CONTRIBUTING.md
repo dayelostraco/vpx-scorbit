@@ -23,11 +23,16 @@ or generator format. Offline fixes and documentation can be proposed directly.
 
 ## Submit a change
 
-Once the public repository is available, fork it, create a focused branch, and
-open a pull request against `main`. During private technical review, provide a
+Fork [the repository](https://github.com/dayelostraco/vpx-scorbit), create a focused
+branch, and open a pull request against `main`. During private technical review, provide a
 patch or review notes through the agreed channel. Contributors do not need a
 Scorbit account for offline changes, and AI-generated changes receive the same
 human review and test requirements as other contributions.
+
+`main` requires a pull request, an up-to-date successful GitHub Actions `quality`
+check and resolved conversations; these protections also apply to administrators.
+Force pushes and deletion are disabled. There is no mandatory approving-review
+count while the project has one maintainer; this is not independent review signoff.
 
 Explain the before/after behavior and list commands actually run. Link a public,
 sanitized validation record for new table claims. Include any known omissions;

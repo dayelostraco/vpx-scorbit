@@ -20,7 +20,8 @@ Blood Machines; Cyber means CyberRace; Sponge means SpongeBob.
   saving). BM/Cyber/Sponge also have corrected name indices, and BM/Sponge have
   separate token files. Seven startup/paired-heartbeat checks pass.
 - Public-facing author notes and patches are in Downloads/Scorbit-author-fixes-2026-10-25.zip.
-- No remote repository, publication or external messages sent.
+- Public source is now at https://github.com/dayelostraco/vpx-scorbit; the initial
+  hosted checks passed. No email/outreach messages have been sent. See sharing-readiness.md.
 
 ## Main remaining work
 
