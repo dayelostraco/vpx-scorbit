@@ -1,66 +1,21 @@
-Subject: ROM-based VPX integration framework: technical review and VPIN onboarding
+﻿Subject: VPIN integration contact and catalog IDs for Medieval Madness / Attack from Mars
 
 Hi Scorbit team!
 
-I've published vpx-scorbit, an experimental open-source framework for adding
-Scorbit support to ROM-based Visual Pinball X tables. It combines shared VBScript components,
-developer utilities, and a documented AI-assisted workflow intended for Codex
-and Claude to make additional integrations more repeatable.
+BLUF: Could you connect me with your VPIN integration lead and help confirm or provision the Medieval Madness and Attack from Mars VPIN entries, including the machine IDs and OPDB values required by your helpers?
 
-Repository: https://github.com/dayelostraco/vpx-scorbit
-Technical review brief: https://github.com/dayelostraco/vpx-scorbit/blob/main/docs/scorbit-review.md
+I've published vpx-scorbit, an experimental framework for repeatable ROM-based VPX integrations:
+https://github.com/dayelostraco/vpx-scorbit
 
-The repository includes developer and table-integration guides, explicit protocol
-assumptions, a milestone roadmap, and automated tests and security checks. Its
-first hosted Windows quality run has passed. Original code is MIT licensed,
-with upstream authorship and separate licenses preserved.
+It builds on Tom Collins's Pinball Memory Maps work, using shared VBScript, existing sToken/sQRCode helpers, and an AI-assisted developer workflow. The intended player experience requires no separate native SDK installation.
 
-This work builds on Tom Collins and the contributors to Pinball Memory Maps and
-py-pinmame-nvmaps. Their documented layouts and reference decoder are foundational:
-https://github.com/tomlogic/pinball-memory-maps
-https://github.com/tomlogic/pinball-memory-maps/blob/main/maplist.md
-https://github.com/tomlogic/py-pinmame-nvmaps
+Medieval Madness (mm_109b) has an offline pilot; Attack from Mars (afm_113b) is next. Neither is qualified for end-to-end Scorbit use yet. The repository includes documentation, tests and security checks, with hosted Windows CI passing.
 
-The current adapter focuses on scores and core game state. Rich mode/event
-support will require separate validation of both ROM signals and the semantics
-Scorbit accepts. A mapped ROM is not yet a qualified table integration.
+My searches found physical/remake entries but no separate VPIN entries. I have not used those physical IDs for virtual or synthetic score submissions.
 
-Medieval Madness (mm_109b) has an offline pilot with live ROM-memory access.
-Attack from Mars (afm_113b) is the next target; its map matches our current decoder
-subset, but its table integration has not been implemented. Neither title is
-qualified for end-to-end Scorbit use yet. I'd like to agree on the supported
-testing and onboarding process before enabling score submissions.
+I'd appreciate guidance on the approved testing process, player-claim schema, mode/event support, retry semantics and helper redistribution. I'd also welcome discussing alignment with your vpx-scorbit-plugin project.
 
-Could you connect me with the person responsible for VPIN integrations and
-supported-title catalog entries? I'd also appreciate discussing how this could
-align with your vpx-scorbit-plugin project and longer-term integration plans.
+Technical questions and catalog references:
+https://github.com/dayelostraco/vpx-scorbit/blob/main/docs/scorbit-review.md
 
-The current approach uses embedded VBScript to read PinMAME state and the
-established sToken/sQRCode helpers. The intended player experience is to link
-the table in the Scorbit app without separately installing a native SDK. Required
-helpers would be supplied through an approved package or documented prerequisite.
-
-My catalog searches found physical/remake entries for Medieval Madness and
-Attack from Mars, but I did not find separate VPIN entries. Guardians of the
-Galaxy, for comparison, had a distinct VPIN entry with machine ID 2108.
-
-Could you confirm whether appropriate MM/AFM VPIN entries already exist, or advise
-on creating them, and provide the machine IDs and OPDB values expected by the
-helpers? The physical entries I found were:
-
-- Medieval Madness - Williams, WPC-95: machine ID 1389 / OPDB G5pe4-MePZv
-- Attack from Mars - Bally, WPC-95: machine ID 1056 / OPDB G4do5-MDlN7
-
-I am not using those physical entries for virtual score submissions and have not
-submitted test or synthetic scores to them.
-
-I'd also appreciate guidance on:
-
-- Your preferred test environment, validation evidence and onboarding process.
-- The supported legacy heartbeat/entry response schema for player claims.
-- Mode/event semantics supported by the helper route versus the SDK.
-- Retry and duplicate handling for identical session sequences and final entries.
-- Token renewal expectations and redistribution terms for sToken/sQRCode.
-
-Thank you for your help. I'd welcome a technical review and a repeatable route
-for bringing additional ROM-based VPX titles into the Scorbit VPIN catalog.
+Thank you for helping establish a repeatable path for bringing more ROM-based VPX tables into Scorbit.
