@@ -7,7 +7,7 @@ Use [compatibility](docs/compatibility.md) for evidence already obtained.
 
 | Milestone | Acceptance criteria | Status / dependencies |
 |---|---|---|
-| Public technical preview | Sanitized source, MIT/upstream notices, repeatable local checks, passing hosted Windows CI, private security reporting and protected main branch | Source prepared; hosted verification is part of initial publication |
+| Public technical preview | Sanitized source, MIT/upstream notices, repeatable local checks, passing hosted Windows CI, private security reporting and protected main branch | Published October 25, 2026; initial hosted run passed and repository protections verified |
 | Scorbit technical agreement | Correct VPIN identities, approved test process, confirmed claim/entry/retry contracts and helper distribution terms | Requires Scorbit collaboration; no requests sent automatically |
 | MM gameplay and service qualification | Complete scoring, 1–4 players, bonus/final scores, tilt/extra balls, claims, uploads, reset/exit and failure/retry evidence | Offline pilot exists; real gameplay and service validation pending |
 | Desktop and VR QR qualification | Square/unobstructed output, actual phone and headset scanning, safe display windows, timeout/hide/recall | Desktop software decode only; VR surface not implemented |

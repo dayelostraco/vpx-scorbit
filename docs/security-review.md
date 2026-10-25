@@ -108,5 +108,6 @@ Do not interpret this inventory as a player installer or cross-platform lock.
   recognized credentials. A separate sanitized initial-commit candidate has since
   been prepared; preserve private history locally and refresh that candidate
   after later source changes. See [sharing readiness](sharing-readiness.md).
-- No remote repository or branch protections have been created yet. A pinned
-  Windows CI workflow is now included; hosted execution awaits publication.
+- Source was subsequently published with private vulnerability reporting and
+  protected main enabled. The initial hosted Windows workflow passed; see
+  [sharing readiness](sharing-readiness.md) for the run and protection details.
