@@ -1,0 +1,4 @@
+# Isolated development tools, not player requirements.
+semgrep==1.182.1
+ruff==0.17.2
+pip-audit==2.10.1

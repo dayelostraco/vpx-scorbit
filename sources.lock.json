@@ -1,0 +1,87 @@
+{
+  "researched_on": "2026-10-24",
+  "repositories": {
+    "vpx-scorbit-plugin": {
+      "url": "https://github.com/scorbit-io/vpx-scorbit-plugin.git",
+      "commit": "e91de9920c8826b3d72c436f6dda3f1871f813a3"
+    },
+    "pinball-memory-maps": {
+      "url": "https://github.com/tomlogic/pinball-memory-maps.git",
+      "commit": "f0c422099f0b50b69bfdf6d071a6653a8b25a6fd"
+    },
+    "scorbit_sdk": {
+      "url": "https://github.com/scorbit-io/scorbit_sdk.git",
+      "commit": "8ce6eb4f8c6e73ccec0a4c139650da0e0a46214e"
+    }
+  },
+  "plugin_api": {
+    "vpx_commit": "84effd7d3e75612652aa3ed68567e47c29cb9a98",
+    "pinmame_commit": "3e85c5c3fa7d0b11147f590f136b03386d055129",
+    "vpx_build_label": "VPinballX_BGFX-6289",
+    "source": "vpx-scorbit-plugin/cmake/vpx_headers.cmake"
+  },
+  "sdk_latest_release_observed": "2.0.4",
+  "sdk_main_reviewed_commit": "c05fbc6e0a79879fc656a681bffb860eca919d6d",
+  "notes": "SDK checkout uses the plugin build pin, not latest SDK main/release. Locking headers alone does not verify cabinet ABI compatibility.",
+  "selected_target": {
+    "sdk_api_version": "2.0.4",
+    "sdk_source_version": "2.0.4",
+    "sdk_artifact_qualified": false,
+    "architecture": "embedded VBScript ROM decoder and legacy helper protocol; SDK companion optional",
+    "legacy_scorbitif_role": "selected player runtime protocol reference",
+    "runtime_baseline": "VPX BGFX 10.8.1.5436.af26b2d93",
+    "live_reader_status": "embedded offline MM attract capture validated; gameplay unqualified"
+  },
+  "reader_reuse_candidates": [
+    {
+      "url": "https://github.com/tomlogic/py-pinmame-nvmaps",
+      "status": "source_reviewed_and_synthetic_compared; proposed_reuse_not_runtime_dependency",
+      "commit": "4a8d77c39badb8fd893672238b90b541ed056581",
+      "map_compatibility_tested_with": "f0c422099f0b50b69bfdf6d071a6653a8b25a6fd"
+    }
+  ],
+  "research_only_sources": {
+    "pinmame_legacy": {
+      "url": "https://github.com/vpinball/pinmame",
+      "commit": "ecd032e55481b261cce4820b53fd28fe478c70b4",
+      "evidence": "installed legacy DLL version; source inspected"
+    },
+    "vpx_baseline": {
+      "url": "https://github.com/vpinball/vpinball",
+      "commit": "af26b2d9392b4c9ec3e3edff4bbd69562085a44c",
+      "evidence": "installed executable version; source inspected"
+    },
+    "pinmame_intended_native_baseline": {
+      "url": "https://github.com/vbousquet/pinmame",
+      "commit": "23321ec7de6dfd563a1c64153bc75f26e5059b9f",
+      "evidence": "Installed engine and wrapper freshly hash-match official VPX 5436 x64 release; this is the source commit in its build recipe, not a DLL self-report"
+    },
+    "pinmame_new_plugin_api": {
+      "url": "https://github.com/vpinball/pinmame",
+      "commit": "3e85c5c3fa7d0b11147f590f136b03386d055129",
+      "evidence": "existing plugin API pin; source comparison only"
+    }
+  },
+  "research_findings": {
+    "scope": "Historical imported research; paths below refer to the private research archive. Current evidence is docs/research.md and docs/HANDOFF.md.",
+    "report": "docs/ROM_STATE_RESEARCH.md",
+    "experiment": "docs/LIVE_READER_EXPERIMENT.md",
+    "runtime_tested": false,
+    "code_changed": false,
+    "companion_language": "Python simplification proposed versus prior C++ default; no implementation selected by runtime evidence",
+    "expected_full_wpc_handler_bytes_on_inspected_windows_serializer": 12334,
+    "mapped_wpc_ram_prefix_bytes": 12288,
+    "windows_backend_inspection": "docs/WINDOWS_BACKEND_INSPECTION.md",
+    "native_artifact_verified": true,
+    "mm_backend": "24 historical MM launch blocks disable native plugin; legacy route supported; current owner configuration unverified",
+    "compatibility_and_pairing": "docs/VPX_COMPATIBILITY_AND_PAIRING.md",
+    "newer_vpx_legacy_source_review": "84effd7d3e75612652aa3ed68567e47c29cb9a98; source only, not runtime-tested",
+    "pairing_ui": "SDK supplies links/codes/events; QR rendering/display is companion UI; not implemented"
+  },
+  "implementation_notes": {
+    "sdk_runtime_qualified": false,
+    "parser_vendored_commit": "4a8d77c39badb8fd893672238b90b541ed056581",
+    "sdk_release_tag_inspected": "807ad452cae989e9b968c3ba743d1df10eaa9db2",
+    "sdk_source_target_preserved": "8ce6eb4f8c6e73ccec0a4c139650da0e0a46214e"
+  }
+}

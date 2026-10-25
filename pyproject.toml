@@ -1,0 +1,25 @@
+[project]
+name = "vpx-scorbit"
+version = "0.1.0"
+description = "Reusable ROM telemetry and embedded Scorbit helper integration for VPX"
+requires-python = ">=3.10"
+dependencies = ["qrcode[pil]==8.2", "windows-curses==2.4.2; sys_platform == 'win32'"]
+
+[project.optional-dependencies]
+sdk = ["scorbit==2.0.4"]
+test = ["coverage==7.14.1", "hypothesis==6.170.9"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "PLW1510"]
+
+[tool.coverage.run]
+branch = true
+source = ["vpx_scorbit", "tools"]
+data_file = "local/security/.coverage"
+
+[tool.coverage.report]
+show_missing = true

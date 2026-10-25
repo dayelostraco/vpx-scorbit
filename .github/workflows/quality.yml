@@ -1,0 +1,44 @@
+name: Windows quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Require the native VBScript host
+        shell: pwsh
+        run: |
+          Get-Command cscript.exe -ErrorAction Stop | Out-Null
+      - name: Install isolated developer dependencies
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          python -m venv .venv
+          if ($LASTEXITCODE) { throw 'venv failed' }
+          .venv/Scripts/python -m pip install --upgrade pip==26.2.2
+          if ($LASTEXITCODE) { throw 'pip upgrade failed' }
+          .venv/Scripts/python -m pip install --require-hashes -r requirements.txt
+          if ($LASTEXITCODE) { throw 'runtime dependencies failed' }
+          .venv/Scripts/python -m pip install coverage==7.14.1 hypothesis==6.170.9
+          if ($LASTEXITCODE) { throw 'test dependencies failed' }
+          python -m venv local/security/venv
+          if ($LASTEXITCODE) { throw 'scanner venv failed' }
+          local/security/venv/Scripts/python -m pip install -r packaging/security-tools.txt
+          if ($LASTEXITCODE) { throw 'scanner dependencies failed' }
+          ./scripts/install-scanners.ps1
+      - name: Test, lint, coverage and security gates
+        shell: pwsh
+        run: ./scripts/check-quality.ps1

@@ -1,0 +1,27 @@
+Subject: VPIN catalog entries for Medieval Madness and Attack from Mars
+
+Historical catalog-only draft, not sent. Prefer scorbit-email-draft.txt for the
+current introduction and project status; do not send both as separate requests.
+
+We are developing ROM-driven VPX integrations using the established
+sToken/sQRCode helper approach, with embedded VBScript reading PinMAME state.
+Players should link the table in the Scorbit app without installing an SDK.
+
+Our October 2026 catalog searches found physical/remake entries for Medieval
+Madness and Attack from Mars, but we did not find VPIN entries. For comparison,
+Guardians of the Galaxy had a separate VPIN entry (2108). Please confirm the
+current catalog rather than treating these observations as authoritative.
+
+Could you confirm or create the appropriate VPIN entries and provide the
+machine IDs and OPDB identifiers expected by the existing helpers?
+
+Reference physical entries, NOT being used for virtual score submissions:
+- Medieval Madness, Williams, WPC-95: 1389 / G5pe4-MePZv
+- Attack from Mars, Bally, WPC-95: 1056 / G4do5-MDlN7
+
+Initial ROM targets are mm_109b and afm_113b. We have not submitted test or
+synthetic scores to those machines. We would also appreciate the supported
+legacy entry-response schema for player claims, mode/event semantics, retry
+behavior for identical session sequences, and helper redistribution terms.
+
+Thank you.

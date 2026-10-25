@@ -1,0 +1,19 @@
+{
+  "title": "Medieval Madness (Williams 1997)",
+  "rom": "mm_109b",
+  "vpx_version": "10.8.1.5436.af26b2d93",
+  "map_commit": "f0c422099f0b50b69bfdf6d071a6653a8b25a6fd",
+  "sdk_commit": "8ce6eb4f8c6e73ccec0a4c139650da0e0a46214e",
+  "validation": "live attract memory; offline VBScript tests; desktop QR decoding; gameplay, claims/upload and VR pending",
+  "table_sha256": "91aa55a7a104d7435ff5df02aca94c45b6fe63cadadbd4da62453953d1aab635",
+  "script_sha256": "bf106cd542bb200d6a9cb3de72186cfee21841a856ff23272174828e6074f9f7",
+  "rom_sha256": "b063f671b1d041ca650cf9531eed37a5d9e802246c09ad2216de18640cd1100d",
+  "vpx_sha256": "0fade422a9f6a0aeefa743220b3c13cb631bf73826dc8d39bc6a015b0469634d",
+  "parser_commit": "4a8d77c39badb8fd893672238b90b541ed056581",
+  "runtime": "embedded VBScript with existing sToken/sQRCode helpers",
+  "catalog": {
+    "verified_vpin_id": null,
+    "physical_id_not_for_submission": 1389,
+    "physical_opdb_not_for_submission": "G5pe4-MePZv"
+  }
+}

@@ -1,0 +1,19 @@
+__pycache__/
+.venv/
+runtime/
+local/
+*.vpx
+*.zip
+*.nv
+*.key
+*.pem
+*.dll
+*.exe
+*.log
+*.hex
+
+# User-provided historical session archive stays private/local.
+docs/prior-research/
+.coverage
+.hypothesis/
+.ruff_cache/

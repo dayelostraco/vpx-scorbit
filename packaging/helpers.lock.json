@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "bundle_version": "0.1.0-dev",
+  "status": "local-development-only; redistribution terms unverified",
+  "helpers": [
+    {
+      "name": "sToken.exe",
+      "sha256": "06981f88020085405aee4227b91792272b90bb7443e4d73958d679b9f53b2878",
+      "role": "authentication"
+    },
+    {
+      "name": "sQRCode.exe",
+      "sha256": "8e1179988fd4631d1b7ce2038930c6b8271bfbafc0730e0d4cc14b11864e2b19",
+      "role": "QR generation"
+    },
+    {
+      "name": "QRView.exe",
+      "sha256": "b85ec97ee65392907c113e7c67378cb96f7ec1dea626f52850ca5018bd54bba0",
+      "role": "legacy compatibility; native QR runtime aims to remove this dependency"
+    }
+  ]
+}
